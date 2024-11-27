@@ -1,4 +1,4 @@
-#Detection and Tracking Methods:
+### Detection and Tracking Methods:
 - Detection: We use a Faster R-CNN model for fish detection. This model is chosen for its accuracy and robustness in detecting objects in images.
 - Tracking: We use the Deep SORT algorithm to track detected fish across video frames. Deep SORT is effective in maintaining object identities even after occlusions.
 
@@ -33,13 +33,13 @@
 
 
 
-##Optimizations:
+### Optimizations:
 - Detection: The Faster R-CNN model is fine-tuned on a relevant dataset to improve detection accuracy.
 - Tracking: Deep SORT parameters are adjusted to handle the specific characteristics of fish movement.
 - Image Processing: CLAHE is used to enhance image contrast
 
 
-##training setups:
+### training setups:
 - epoches=10
 - learning rate=1e-4
 - batch size=1
