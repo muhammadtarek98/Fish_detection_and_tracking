@@ -1,9 +1,11 @@
 Detection and Tracking Methods
 Detection: We use a Faster R-CNN model for fish detection. This model is chosen for its accuracy and robustness in detecting objects in images.
-Tracking: We use the Deep SORT algorithm for tracking detected fish across video frames. Deep SORT is effective in maintaining object identities even after occlusions.
+Tracking: We use the Deep SORT algorithm to track detected fish across video frames. Deep SORT is effective in maintaining object identities even after occlusions.
 model details
+
+
 ==============================================================================================================
-Layer (type:depth-idx)                                       Output Shape              Param #
+Layer (type:depth-IDX)                                       Output Shape              Param #
 ==============================================================================================================
 FasterRCNN                                                   [0, 4]                    --
 ├─FasterRCNN: 1-1                                            [0, 4]                    --
@@ -29,6 +31,10 @@ Forward/backward pass size (MB): 263.78
 Params size (MB): 75.72
 Estimated Total Size (MB): 389.26
 ==============================================================================================================
+
+
+
+
 Optimizations
 Detection: The Faster R-CNN model is fine-tuned on a relevant dataset to improve detection accuracy.
 Tracking: Deep SORT parameters are adjusted to handle the specific characteristics of fish movement.
