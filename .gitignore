@@ -1,0 +1,6 @@
+DeepFish.tar
+*.mp4
+detection
+checkpoints
+DeepFish
+*.pdf
