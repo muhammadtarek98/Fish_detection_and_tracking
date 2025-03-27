@@ -3,3 +3,4 @@ detection
 checkpoints
 DeepFish
 *.pdf
+/cpp_inference/cmake-build-debug/

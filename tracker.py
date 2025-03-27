@@ -6,7 +6,6 @@ from deep_sort_realtime.deepsort_tracker import DeepSort
 from torch_model import FasterRCNN
 from collections import OrderedDict
 import time
-
 def enhance_image(image:np.ndarray)->np.ndarray:
     r, g, b = cv2.split(image)
     clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
@@ -101,7 +100,6 @@ def process_video(input_path: str, output_path: str, model: torch.nn.Module, tra
         pred_boxes = predictions['boxes'][0]
         pred_scores = predictions['scores'][0]
         pred_labels = predictions['labels'][0]
-
         for box, label, score in zip(pred_boxes, pred_labels, pred_scores):
             xmin, ymin, xmax, ymax = box
             label = label.detach().cpu().numpy()

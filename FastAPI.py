@@ -31,7 +31,7 @@ async def process_video_endpoint(file: UploadFile = File(...)):
         shutil.copyfileobj(file.file, buffer)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    model = get_the_model("/home/muhammad/projects/SEE_assessment/detection_model.ckpt", device)
+    model = get_the_model(ckpt_path="/home/muhammad/projects/SEE_assessment/detection_model.ckpt",device= device)
     tracker = load_tracker()
 
     try:
